@@ -2,7 +2,7 @@
 
 <p align="center">
 
-🚀 **Live Demo:**  
+🚀 **Try it at:**  
 https://hku-planner.mjxw05.chatgpt.site/
 
 </p>
