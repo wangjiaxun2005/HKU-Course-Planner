@@ -14,6 +14,7 @@
 
 ---
 
+## Please use the zip file to pack the chrome extension in this repo instead of the one showed in the website!!!
 ## Overview
 
 HKU Course Planner is an intelligent course planning tool designed to simplify the course selection process for students at The University of Hong Kong.
