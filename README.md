@@ -14,7 +14,11 @@
 
 ---
 
-## Please use the zip file to pack the chrome extension in this repo instead of the one showed in the website!!!
+> ⚠️ **Important:** Please use the Chrome extension zip file provided in this repository instead of the version shown on the website.  
+> Installation guide: [Browser Extension](#-browser-extension)
+
+---
+
 ## Overview
 
 HKU Course Planner is an intelligent course planning tool designed to simplify the course selection process for students at The University of Hong Kong.
@@ -57,12 +61,13 @@ It helps students:
 ### 📚 Course Planning
 
 - Organize courses and subclasses in one workspace
-- View course information including:
+- View important course information:
   - Course code
   - Course title
   - Class number
   - Schedule
   - Credits
+- Build semester plans before official enrollment
 
 ---
 
@@ -74,7 +79,10 @@ It can:
 
 - Read current SIS temporary course selections
 - Compare SIS status with your planned courses
-- Detect missing, incorrect, or extra courses
+- Detect differences:
+  - Missing courses
+  - Incorrect subclasses
+  - Extra courses
 - Automatically synchronize your planned schedule with SIS
 
 <img src="./assets/sis-sync.png" width="100%" />
@@ -97,9 +105,45 @@ The extension provides:
 
 ---
 
+### 📦 Extension Installation
+
+The extension can be installed locally using the Chrome extension package provided in this repository.
+
+Installation workflow:
+
+1. Download the extension zip file from this repository.
+2. Extract the zip file.
+3. Open Chrome Extensions page.
+4. Enable **Developer Mode**.
+5. Select **Load unpacked**.
+6. Choose the extracted extension folder.
+
+<img src="./assets/extension-install.png" width="100%" />
+
+---
+
 ## How It Works
 
-Course Plan → Schedule Analysis → SIS Comparison → Difference Detection → Course Synchronization
+```
+Course Plan
+      |
+      v
+Schedule Analysis
+      |
+      v
+Compare With HKU SIS
+      |
+      v
+Detect Differences
+      |
+      v
+Synchronize Courses
+      |
+      v
+Updated SIS Temporary Course List
+```
+
+The system compares your desired course plan with your current SIS state and only performs the required operations.
 
 ---
 
@@ -119,14 +163,17 @@ HKU Course Planner reduces this friction by providing a unified planning and syn
 ## Tech Stack
 
 ### Frontend
+
 - React
 - TypeScript
 
 ### Browser Extension
+
 - TypeScript
 - Chrome Extension APIs
 
 ### Core Technologies
+
 - Course data processing
 - Schedule conflict detection
 - Browser automation
